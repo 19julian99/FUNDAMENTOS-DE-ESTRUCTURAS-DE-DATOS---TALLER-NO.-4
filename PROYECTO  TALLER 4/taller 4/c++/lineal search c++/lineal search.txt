@@ -1,0 +1,40 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout << "INGRESE EL TAMAÑO DEL ARRAY";
+    int m;
+    printf("\n");
+    cin >> m;
+    printf("\n");
+    int array[m];
+    int index;
+    for(int i=0;i<m;i++){
+               cout<<"ingrese el numero para el vector uno por uno:  ";
+            int numa;
+            cin>>numa;
+            array[i]=numa;
+    }
+   
+   cout<<"ingrese el numero a buscar:  ";
+   int value;
+   cin>>value;
+       
+    
+    for(int i=0;i<m;i++){
+              if(array[i]==value){
+                   index=1;
+                   break;
+              }
+    }
+    
+    cout<<"el indice del numero deseado es :"; cout<<index;cout<<"\n";
+    
+    
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

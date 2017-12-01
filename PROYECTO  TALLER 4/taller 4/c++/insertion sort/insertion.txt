@@ -1,0 +1,47 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout << "INGRESE EL TAMAÑO DEL ARRAY";
+    int m;
+    printf("\n");
+    cin >> m;
+    printf("\n");
+    int array[m];
+    
+    for(int i=0;i<m;i++){
+            cout<<"ingrese el numero para la matriz:  ";
+            int numa;
+            cin>>numa;
+            array[i]=numa;
+    }
+    int x;
+    int x2=array[0];
+    int index;
+    
+    for(int i=1;i<m;i++){
+     x=array[i];
+     index=i;
+     while(index >0 && array[index-1] ){
+     index=index-1;
+     }
+     array[index]=x ;           
+    
+    }    
+    array[0]=x2;
+    for(int i=0;i<m;i++){
+    cout<<"[";
+           cout<<array[i];
+           cout<<"]";
+              }
+        
+
+    
+    
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
